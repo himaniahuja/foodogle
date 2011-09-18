@@ -1,0 +1,165 @@
+body { background-color: #fff; color: #333; }
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+	padding: 0px 40px;
+	background: #FFFFFF;
+}
+
+#header {
+
+background: #fff;
+padding-top: 10px;
+padding-bottom: 0px;
+border-bottom: 2px solid;
+font: large 40px/40px "Times New Roman", serif; color: #282;
+height: 140px;
+}
+
+#header img {
+  float: right;
+  padding-right: 130px;
+}
+
+/* Logo*/
+
+#logo {
+	padding-top: 0px;
+	letter-spacing: -1px;
+	text-transform: lowercase;
+    font: normal 14px Georgia, "Times New Roman", Times, serif;
+	font-size: 5em;
+    height: 65px;
+}
+
+/* Menu */
+
+#menu {
+	float: left;
+	width: 690px;
+	height: 20px;
+	padding: 0px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+	border-right: 20px solid #ffffff;
+    font-size: 1.5em
+}
+
+
+/* Search */
+
+#search {
+    padding-left: 700px;
+	width: 600px;
+}
+
+#search form {
+
+	height: 80px;
+	margin: 10;
+}
+
+#search fieldset {
+	margin: 20;
+	border: #FFFFFF;
+}
+
+#search-text {
+	width: 300px;
+    height: 25px;
+
+	border: #FFF;
+	background: #669900 url(images/img02.jpg) no-repeat left top;
+	text-transform: lowercase;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+
+#search-submit {
+	width: 62px;
+	height: 22px;
+	border: none;
+	background: #FFFFFF;
+	color: #000000;
+}
+
+
+
+#columns {
+   padding-top: 0px;
+    width: 50em;
+    height: 30em;
+    background: #ffffff;
+}
+
+/* Sidebar */
+
+#sidebar {
+
+    float: left;
+    margin-left: 0em;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 15em;
+    height: 30em;
+    background: #141;
+}
+
+#sidebar li {
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+
+#sidebar li  h4 {
+	margin: 0;
+	padding: 0;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+#sidebar li ul {
+	margin: 0px 0px;
+	padding-bottom: 0px;
+    list-style-type: square; color: #000000;
+}
+
+#sidebar li li {
+	border-bottom: none;
+	padding: 0px 0px;
+	border-left: none;
+    color: #FFFFFF;
+}
+
+/* main */
+
+#main {
+  float:right;
+  width: 30em;
+  padding: 30px 0px 0px 0px;
+  background: #ffffff;
+}
+
+#main textarea {
+    max-width: 200px;
+    max-height: 15px;
+}
+
+#main textarea.content {
+    max-width: 600px;
+    max-height: 200px;
+}

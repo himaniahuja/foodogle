@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @recipe.name %>
+</p>
+
+<p>
+  <b>Short description:</b>
+  <%= @recipe.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @recipe.image_url %>
+</p>
+
+<p>
+  <b>Cuisine:</b>
+  <%= @cuisine.title %>
+</p>
+
+<p>
+<b> Ingredients: </b>
+    <% @ingredients.each do |f| %>
+    <%= f.ing_name %>
+    <% end %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @recipe.content %>
+</p>
+
+<%= link_to 'Back', recipes_path %>

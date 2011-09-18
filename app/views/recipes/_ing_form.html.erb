@@ -1,0 +1,4 @@
+<% form_tag(:controller => "recipes", :action => "create") do %>
+  <%= text_area_tag(:ing_name, "Enter the ingredient", :size => "10x6") %><br />
+  <%= submit_tag("Add") %>
+<% end %>

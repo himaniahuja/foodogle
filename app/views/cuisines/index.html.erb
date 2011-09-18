@@ -1,0 +1,29 @@
+<h1>Listing cuisines</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+ <div id="cuisines">
+
+    <% @cuisines.each do |cuisine| %>
+        <tr>
+            <td><%= cuisine.title %></td>
+            <td><%= link_to 'More', cuisine %></td>
+        </tr>
+    <% end %>
+
+ </div>
+
+</table>
+
+<br />
+
+
+
+<%= link_to 'New Cuisine', new_cuisine_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ing_name: MyString
+  recipe_id: 1
+
+two:
+  ing_name: MyString
+  recipe_id: 1
+
+# == Schema Information
+#
+# Table name: ingredients
+#
+#  id         :integer         not null, primary key
+#  ing_name   :string(255)
+#  recipe_id  :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
