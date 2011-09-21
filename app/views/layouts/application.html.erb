@@ -49,16 +49,28 @@
         <div id="columns">
 
           <div id="sidebar">
-            <li>
-				<h4> Most Popular</h4>
-				<ul>
-				    <li>Recipe1</li>
-                    <li>Recipe2</li>
-                    <li>Recipe3</li>
-                    <li>Recipe4</li>
+                <ul>
+			        <h4>Quick links</h4>
 
-				</ul>
-			</li>
+			        <li><%= link_to "Add your Recipe", new_recipe_path %></li>
+                    <li><%= link_to "Add a Cuisine", new_cuisine_path %></li>
+                    <li><%= link_to "Search by ingredients", '/ingredients' %></li>
+
+                    <br/>
+
+                    <h4>Cuisines</h4>
+
+                    <% $cuisines = Cuisine.find(:all, :limit => 10)  %>
+                    <% $cuisines.each do |cuisine| %>
+                        <li><%= link_to cuisine.title, cuisine %></li>
+                    <% end %>
+                    <br/>
+                    <div id= "more">
+
+                        <%= link_to "more", '/cuisines' %>
+                    </div>
+
+			    </ul>
           </div>
 
           <div id="main">
@@ -67,19 +79,33 @@
 
         </div>
 
+
+
     </body>
 
-    <!-- Place this tag where you want the +1 button to render -->
-    <!--g:plusone annotation="inline"></g:plusone-->
+    <div id="footer-menu">
+	        <ul>
+	        	<li><a href="/pages/home">Homepage</a></li>
+                <li><a href="/pages/about">About</a></li>
+		        <li><a href="/pages/contact">Contact</a></li>
+	        </ul>
 
-    <!-- Place this render call where appropriate -->
+    </div>
+    <div id="footer">
+	        <p>Copyright (c) 2011 foodogle.com. All rights reserved. Designed by Himani Ahuja</p>
+    </div>
+
     <script type="text/javascript">
-        (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
+       (
+            function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            }
+        )
+        ();
+
+    </script>
 
 
 </html>

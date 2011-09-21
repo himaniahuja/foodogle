@@ -6,6 +6,10 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+ body h2, h3{
+    font: "Times New Roman", serif; color: #282;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -47,7 +51,7 @@ div.field, div.actions {
   margin: -7px;
   margin-bottom: 0px;
   background-color: #c00;
-  color: #fff;
+  color: #000;
 }
 
 #error_explanation ul li {

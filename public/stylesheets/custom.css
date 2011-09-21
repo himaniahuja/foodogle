@@ -1,4 +1,7 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #fff;
+    color: #333;
+    height: 32em;
+}
 
 .container {
 	width: 1000px;
@@ -98,7 +101,7 @@ height: 140px;
 #columns {
    padding-top: 0px;
     width: 50em;
-    height: 30em;
+    height: 33em;
     background: #ffffff;
 }
 
@@ -112,7 +115,7 @@ height: 140px;
     padding-left: 1em;
     padding-bottom: 1em;
     width: 15em;
-    height: 35em;
+    height: 32em;
     background: #141;
 }
 
@@ -138,12 +141,20 @@ height: 140px;
     list-style-type: square; color: #000000;
 }
 
+#sidebar ul h4 {
+	margin: 0px 0px;
+	padding-bottom: 0px;
+    list-style-type: square; color: #fff;
+}
+
 #sidebar li li {
 	border-bottom: none;
 	padding: 0px 0px;
 	border-left: none;
     color: #FFFFFF;
+
 }
+
 
 /* main */
 
@@ -152,6 +163,8 @@ height: 140px;
   width: 30em;
   padding: 30px 0px 0px 0px;
   background: #ffffff;
+  height: 32em;
+
 }
 
 #main textarea {
@@ -162,4 +175,59 @@ height: 140px;
 #main textarea.content {
     max-width: 600px;
     max-height: 200px;
+}
+
+
+/* Footer */
+
+#footer {
+	width: 980px;
+	height: 50px;
+
+	padding: 0px 0px 0px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding: 0px 0px 0px 40px;
+	line-height: normal;
+	color: #A0A0A0;
+}
+
+#footer a {
+	color: #000000;
+}
+
+/* Footer Menu */
+
+#footer-menu {
+	width: 960px;
+	height: 60px;
+	margin: 0px auto;
+	padding: 0px 0px 0px 0px;
+}
+
+#footer-menu ul {
+	margin: 0;
+	padding: 30px 0px 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#footer-menu li {
+	float: left;
+}
+
+#footer-menu a {
+	display: block;
+	padding: 0px 20px 0px 20px;
+	text-decoration: none;
+    text-align: center;
+	text-transform: capitalize;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	border-right: 1px solid #000000;
 }

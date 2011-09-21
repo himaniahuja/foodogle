@@ -1,22 +1,14 @@
-<h3>Recipes</h3>
+<h2>All Recipes</h2>
 
  <%= will_paginate %>
 
-<table>
-
 <% @recipes.each do |recipe| %>
-  <tr>
+  <li>
     <td><%= link_to recipe.name, recipe %></td>
-   <!-- <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-    <td><%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></td>
-    -->
-  </tr>
+  </li>
 <% end %>
-</table>
-
 <br />
  <%= will_paginate %><br/>
-
 
 <h3>
   <%= link_to 'Add Recipe', new_recipe_path %>
