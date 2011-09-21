@@ -1,5 +1,5 @@
 <h1>Listing cuisines</h1>
-
+ <%= will_paginate %>
 <table>
   <tr>
     <th>Title</th>
@@ -21,9 +21,10 @@
  </div>
 
 </table>
+<%= will_paginate %>
 
 <br />
 
 
 
-<%= link_to 'New Cuisine', new_cuisine_path %>
+<%= link_to 'Add a Cuisine', new_cuisine_path %>

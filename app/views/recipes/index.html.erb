@@ -1,4 +1,6 @@
-<h1>All Recipes</h1>
+<h3>Recipes</h3>
+
+ <%= will_paginate %>
 
 <table>
 
@@ -13,11 +15,11 @@
 </table>
 
 <br />
-
+ <%= will_paginate %><br/>
 
 
 <h3>
-  <%= link_to 'You can add your own Recipe', new_recipe_path %>
+  <%= link_to 'Add Recipe', new_recipe_path %>
 
 
 </h3>

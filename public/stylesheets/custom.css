@@ -30,7 +30,6 @@ height: 140px;
 	text-transform: lowercase;
     font: normal 14px Georgia, "Times New Roman", Times, serif;
 	font-size: 5em;
-    height: 65px;
 }
 
 /* Menu */
@@ -59,35 +58,36 @@ height: 140px;
 /* Search */
 
 #search {
-    padding-left: 700px;
-	width: 600px;
+    /*padding-left: 700px;*/
+
+	width: 200px;
 }
 
 #search form {
 
 	height: 80px;
-	margin: 10;
+	margin: 0;
 }
 
 #search fieldset {
-	margin: 20;
+	margin: 0;
 	border: #FFFFFF;
 }
 
 #search-text {
-	width: 300px;
+	width: 10px;
     height: 25px;
 
 	border: #FFF;
-	background: #669900 url(images/img02.jpg) no-repeat left top;
+	background: #669900 url(images/searchbox.jpg) no-repeat left top;
 	text-transform: lowercase;
 	font: normal 11px Arial, Helvetica, sans-serif;
 	color: #fff;
 }
 
 #search-submit {
-	width: 62px;
-	height: 22px;
+	width: 10px;
+	height: 25px;
 	border: none;
 	background: #FFFFFF;
 	color: #000000;
@@ -112,7 +112,7 @@ height: 140px;
     padding-left: 1em;
     padding-bottom: 1em;
     width: 15em;
-    height: 30em;
+    height: 35em;
     background: #141;
 }
 

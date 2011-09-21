@@ -1,5 +1,36 @@
 class Ingredient < ActiveRecord::Base
   belongs_to :recipe, :foreign_key => "recipe_id"
+
+  #def self.search(search)
+  #  if search
+  #    where('ing_name LIKE ?', "%#{search}%")
+  #  else
+  #    scoped
+  #  end
+  #end
+
+  def self.my_search(search_items, search_type)
+    last_element = search_items.last
+    search_condition = " "
+
+    search_items.each do |si|
+
+      puts "aAAAAA"
+      puts si
+      if si
+
+        search_condition = search_condition + "ing_name = '#{si}'"
+        if si != last_element
+          search_condition = search_condition + " " + search_type + " "
+
+        end
+
+      end
+    end
+
+    where (search_condition)
+
+  end
 end
 
 # == Schema Information

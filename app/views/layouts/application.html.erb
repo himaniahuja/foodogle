@@ -12,6 +12,7 @@
 
     <body id="container">
 
+
         <div id="header">
 
             <div id="logo">
@@ -27,19 +28,18 @@
                     <li><%= link_to "Home", '/pages/home' %></li>
                     <li><%= link_to "Recipes", '/recipes' %></li>
                     <li><%= link_to "Cuisines", '/cuisines' %></li>
-                    <li><%= link_to "Ingredients", '/pages/ing' %></li>
+                    <li><%= link_to "Ingredients", '/ingredients' %></li>
                   </ul>
                 </nav>
               </div>
 
               <div id="search" >
-                  <% form_tag recipes_path, :method => 'get' do %>
+                  <%= form_tag recipes_path, :method => 'get', :id => 'home' do %>
                       <p>
                         <%= text_field_tag :search, params[:search] %>
                         <%= submit_tag "Search Recipe", :name => nil %>
                       </p>
                   <% end %>
-                </form>
               </div>
 
             </div>
@@ -68,5 +68,18 @@
         </div>
 
     </body>
+
+    <!-- Place this tag where you want the +1 button to render -->
+    <!--g:plusone annotation="inline"></g:plusone-->
+
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+        (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
 
 </html>

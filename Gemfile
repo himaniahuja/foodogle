@@ -8,11 +8,13 @@ gem 'bundler'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'will_paginate'
+gem 'will_paginate', '3.0.pre2'
 
 
 group :development do
 gem 'annotate'
+gem "rspec-rails", "~> 2.4"
+
 end
 
 

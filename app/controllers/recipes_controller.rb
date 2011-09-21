@@ -2,8 +2,8 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.xml
   def index
-    @recipes = Recipe.all
-    @recipes = Recipe.search(params[:search])
+
+   @recipes = Recipe.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -31,10 +31,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @cuisines = Cuisine.find(:all, :order => 'title')
 
-    3.times do
-      ingredient = @recipe.ingredients.build
-    end
-
+    ingredient = @recipe.ingredients.build
 
     respond_to do |format|
       format.html # new.html.erb
