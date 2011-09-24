@@ -1,18 +1,12 @@
 <h2>All Cuisines</h2>
- <%= will_paginate %>
-<table>
-  <tr>
-    <th>Title</th>
-  </tr>
+    <%= will_paginate %>
 
-
- <div id="cuisines">
-
+    <div id="cuisines">
     <% @cuisines.each do |cuisine| %>
-        <tr>
-            <td><%= cuisine.title %></td>
-            <td><%= link_to 'More', cuisine %></td>
-        </tr>
+        <ul>
+            <td><h3><%= link_to cuisine.title, cuisine %></h3></td>
+
+        </ul>
     <% end %>
 
  </div>

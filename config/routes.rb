@@ -9,7 +9,6 @@ Foodogle::Application.routes.draw do
   get "pages/about"
 
 
-
   match '/ingredients/new', :controller => 'ingredients', :action => "new"
 
 

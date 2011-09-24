@@ -14,7 +14,7 @@ class Recipe < ActiveRecord::Base
 
   validates_uniqueness_of :name, :message => "Already exists please use another name "
   validates_length_of :name, :within => 1..20
-  validates_length_of :description, :within => 1..70
+  validates_length_of :description, :within => 1..200
 
 
 
@@ -23,6 +23,14 @@ class Recipe < ActiveRecord::Base
     if search
       find(:all, :conditions => ['name LIKE ?', "%#{search}%"], :order => :cuisine_id)
       #where('name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
+  def self.cuisineSearch(search)
+    if search
+      find(:all, :conditions => ['cuisine_id LIKE ?', "#{search}"], :order => "name")
     else
       scoped
     end

@@ -28,7 +28,10 @@ class IngredientsController < ApplicationController
 
      if params[:search_4] != ""
       @search_strings << params[:search_4]
-    end
+     end
+
+
+
 
     @ingredients = Ingredient.my_search(@search_strings, @search_type)
     @ingredients.each do |ingredient|
@@ -37,7 +40,10 @@ class IngredientsController < ApplicationController
         if @recipes.index(@recipe) == nil
            @recipes << @recipe
         end
+
     end
+
+
 
     respond_to do |format|
 

@@ -14,7 +14,9 @@ describe RecipesController do
   describe "GET 'show'" do
 
     before(:each) do
-      @attr = { :name => "Example Recipe", :description => "Example description", :cuisine_id => "example id", :content => "Example content" }
+      @attr = { :name => "Example Recipe", :description => "Example description", :cuisine_id => "1", :content => "Example content" }
+      @cuisine= Cuisine.create(:title=> "example", :description=> "desc")
+      @recipe = Recipe.create(@attr)
     end
 
     it "should be successful" do

@@ -1,17 +1,32 @@
-<h2> You can cook: </h2>
+<% if @recipes.length == 0 %>
+    <div id="error_explanation">
+         <h3>Could not find any recipes matching your search ! </h2>
+    </div>
+<%else%>
+    <h2> Recipes found with
+        <% @i = 0 %>
+        <%@search_strings.each do|ing| %>
+            <%= ing %>
+            <% @i = @i + 1 %>
+            <% if (@i < (@search_strings.length) - 1)%>
+                ,
+            <% elsif (@i == (@search_strings.length) - 1) %>
+                and
+            <% else %>
+                :
+            <%end%>
+        <%end%>
+    </h2>
 
- <%#= will_paginate %>
-
-<table>
-
-<% @recipes.each do |recipe| %>
-  <tr>
-    <td><%= link_to recipe.name, :controller => 'ingredients', :action => 'show', :id => recipe.id  %></td>
-  </tr>
+    <% @recipes.each do |recipe| %>
+       <ul>
+        <li><%= link_to recipe.name, :controller => 'ingredients', :action => 'show', :id => recipe.id  %>
+        </li>
+       </ul>
+    <% end %>
 <% end %>
-</table>
 
-<br />
- <%#= will_paginate %><br/>
+<%= link_to 'Back', ingredients_path %>
+
 
 

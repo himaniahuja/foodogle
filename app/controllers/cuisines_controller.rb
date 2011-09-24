@@ -2,7 +2,7 @@ class CuisinesController < ApplicationController
   # GET /cuisines
   # GET /cuisines.xml
   def index
-    @cuisines = Cuisine.paginate(:page => params[:page], :per_page => 5)
+    @cuisines = Cuisine.find(:all, :order => 'title').paginate(:page => params[:page], :per_page => 5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +14,7 @@ class CuisinesController < ApplicationController
   # GET /cuisines/1.xml
   def show
     @cuisine = Cuisine.find(params[:id])
+    @recipes = Recipe.cuisineSearch(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,111 +1,105 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <title>Foodogle</title>
-        <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-        <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-        <%= stylesheet_link_tag 'custom', :media => 'screen' %>
-        <%= javascript_include_tag :defaults, :cache => true %>
-        <%= csrf_meta_tag %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <title>Foodogle</title>
+      <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+      <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+      <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+      <%= javascript_include_tag :defaults, :cache => true %>
+      <%= csrf_meta_tag %>
     </head>
 
-    <body id="container">
-
-
+    <body>
         <div id="header">
-
             <div id="logo">
-               <%= image_tag("food.jpg") %>
-               <%= "Foodogle" %>
-            </div>
-
-            <div id="wrapper">
-
-              <div id="menu">
-                <nav class="options">
-                  <ul>
-                    <li><%= link_to "Home", '/pages/home' %></li>
-                    <li><%= link_to "Recipes", '/recipes' %></li>
-                    <li><%= link_to "Cuisines", '/cuisines' %></li>
-                    <li><%= link_to "Ingredients", '/ingredients' %></li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div id="search" >
-                  <%= form_tag recipes_path, :method => 'get', :id => 'home' do %>
-                      <p>
-                        <%= text_field_tag :search, params[:search] %>
-                        <%= submit_tag "Search Recipe", :name => nil %>
-                      </p>
-                  <% end %>
-              </div>
-
+                 <h1><a href="#">foodogle </a></h1>
+                 <p> belly rules the mind....</p>
             </div>
         </div>
-
-
-        <div id="columns">
-
-          <div id="sidebar">
+            <!-- end #header -->
+        <div id="wrapper">
+           	<div id="menu">
+           		<ul>
+          			<li class="current_page_item"><%= link_to "Home", '/pages/home' %></li>
+           			<li><%= link_to "Recipes", '/recipes' %></li>
+           			<li><%= link_to "Cuisines", '/cuisines' %></li>
+           			<li><%= link_to "Ingredients", '/ingredients' %></li>
+           		</ul>
+           	</div>
+        <!-- end #menu -->
+           	<div id="search-wrapper" >
+                <%= form_tag recipes_path, :method => 'get' do %>
+                    <%= text_field_tag :search, params[:search] || " Search recipe"%>
+                    <%#= image_submit_tag ("img02.jpg")%>
+                    <% submit_tag "  ", :name => nil %>
+                <%end%>
+            </div>
+        </div>
+        <div id="page">
+            <div id="content">
+                <div class="post">
+                    <%= yield %>
+                </div>
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+            <!-- end #content -->
+            <div id="sidebar">
                 <ul>
-			        <h4>Quick links</h4>
-
-			        <li><%= link_to "Add your Recipe", new_recipe_path %></li>
-                    <li><%= link_to "Add a Cuisine", new_cuisine_path %></li>
-                    <li><%= link_to "Search by ingredients", '/ingredients' %></li>
-
-                    <br/>
-
-                    <h4>Cuisines</h4>
-
-                    <% $cuisines = Cuisine.find(:all, :limit => 10)  %>
-                    <% $cuisines.each do |cuisine| %>
-                        <li><%= link_to cuisine.title, cuisine %></li>
-                    <% end %>
-                    <br/>
-                    <div id= "more">
-
-                        <%= link_to "more", '/cuisines' %>
-                    </div>
-
-			    </ul>
-          </div>
-
-          <div id="main">
-                <%= yield %>
-          </div>
-
+                            <h4>Quick links</h4>
+                            <li><%= link_to "Add your Recipe", new_recipe_path %></li>
+                            <li><%= link_to "Add a Cuisine", new_cuisine_path %></li>
+                            <li><%= link_to "Search by ingredients", '/ingredients' %></li>
+                            <br/>
+                            <h4>Cuisines</h4>
+                            <% $cuisines = Cuisine.find(:all, :limit => 10)  %>
+                            <% $cuisines.each do |cuisine| %>
+                                <li><%= link_to cuisine.title, cuisine %></li>
+                            <% end %><br/>
+                            <div id= "more">
+                                <%= link_to "more", '/cuisines' %>
+                            </div>       </br>
+                            <!-- AddThis Button BEGIN -->
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_preferred_1"></a>
+                                    <a class="addthis_button_preferred_2"></a>
+                                    <a class="addthis_button_preferred_3"></a>
+                                    <a class="addthis_button_preferred_4"></a>
+                                    <a class="addthis_button_compact"></a>
+                                    <a class="addthis_counter addthis_bubble_style"></a>
+                                 </div>
+                             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e7d68ce1e14dd39"></script>
+                            <!-- AddThis Button END -->
+                </ul>
+            </div>
+            <!-- end #sidebar -->
+            <div style="clear: both;">&nbsp;</div>
         </div>
-
-
-
+        <!-- end #page -->
+        <div id="footer-menu">
+            <ul>
+                <li class="current_page_item"><a href="/pages/home">Homepage</a></li>
+                <li><a href="/pages/about">About</a></li>
+                <li><a href="/pages/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>Designed by Himani Ahuja</p>
+        </div>
+        <!-- end #footer -->
     </body>
 
-    <div id="footer-menu">
-	        <ul>
-	        	<li><a href="/pages/home">Homepage</a></li>
-                <li><a href="/pages/about">About</a></li>
-		        <li><a href="/pages/contact">Contact</a></li>
-	        </ul>
+        <script type="text/javascript">
+               (
+                    function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    }
+                )
+                ();
 
-    </div>
-    <div id="footer">
-	        <p>Copyright (c) 2011 foodogle.com. All rights reserved. Designed by Himani Ahuja</p>
-    </div>
-
-    <script type="text/javascript">
-       (
-            function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            }
-        )
-        ();
-
-    </script>
-
-
+        </script>
 </html>

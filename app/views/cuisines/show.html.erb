@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @cuisine.title %>
+  <h2><%= @cuisine.title %></h2>
 </p>
 
 <p>
   <b>Description:</b>
   <%= @cuisine.description %>
 </p>
+
+<p>
+  <b><h4> Related recipes: </h4></b>
+  <% @recipes.each do |recipe|%>
+    <ul>
+         <td><h4><%= link_to recipe.name, recipe %></h3></td>
+    </ul>
+  <% end %>
+
 
 
 <%= link_to 'Edit', edit_cuisine_path(@cuisine) %> |

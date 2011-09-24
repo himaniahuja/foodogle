@@ -47,7 +47,7 @@ describe Recipe do
    end
 
    it "should reject descriptions that are too long" do
-    long_name = "a" * 71
+    long_name = "a" * 201
     long_description_recipe = Recipe.new(@attr.merge(:description => long_name))
     long_description_recipe.should_not be_valid
    end

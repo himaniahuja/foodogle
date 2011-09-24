@@ -2,14 +2,14 @@
 
 <br/>
 <br/>
-<h3>Ingredients I want:</h3>
+<h3>Enter the ingredients you have</h3>
 <div id="search" >
      <%= form_for ingredients_path, :method => 'get', :action => 'create' do %>
      <p>
-        <%= text_field_tag :search_1, params[:search_1]%>
-        <%= text_field_tag :search_2, params[:search_2]%>
-        <%= text_field_tag :search_3, params[:search_3]%>
-        <%= text_field_tag :search_4, params[:search_4]%>
+        <%= text_field_tag :search_1, params[:search_1]%>   <br/>
+        <%= text_field_tag :search_2, params[:search_2]%>   <br/>
+        <%= text_field_tag :search_3, params[:search_3]%>   <br/>
+        <%= text_field_tag :search_4, params[:search_4]%>   <br/>
         <%= submit_tag "Search", :name => nil %>
      </p>
      <% end %>
