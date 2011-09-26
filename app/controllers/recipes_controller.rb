@@ -37,8 +37,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @cuisines = Cuisine.find(:all, :order => 'title')
 
-    #@ingredient = @recipe.ingredients.build
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @recipe }

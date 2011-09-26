@@ -22,6 +22,8 @@ h1, h2, h3 {
 	color: #8B0000;
 }
 
+
+
 h1 {
 	font-size: 2em;
 }
@@ -159,53 +161,6 @@ a:hover {
 }
 
 
-
-/* Search */
-
-/*#search-wrapper {*/
-	/*float: right;*/
-	/*width: 230px;*/
-    /*padding-right:20px;*/
-    /*padding-top: 0px;*/
-    /*background-image:url(img02.jpg);*/
-    /*background-repeat: no-repeat;*/
-    /*position:relative;*/
-    /*border:  none;*/
-/*}*/
-
-
-/*#search form {*/
-    /*display: inline;*/
-    /*height: 41px;*/
-	/*margin: 10px;*/
-	/*padding: 17px 0 0 20px;*/
-    /*border: none;*/
-/*}*/
-
-/*#search fieldset {*/
-
-    /*margin: 0px;*/
-    /*padding:  0px;*/
-    /*border:  none;*/
-    /*background-color:transparent;*/
-    /*position:absolute;*/
-/*}*/
-
-/*#search-text {*/
-
-    /*width: 130px;*/
-    /*padding: 8px 5px 6px 5px;*/
-	/*border: none;*/
-	/*text-transform: lowercase;*/
-	/*font: normal 11px Arial, Helvetica, sans-serif;*/
-	/*color: #000000;*/
-/*}*/
-
-/*#search-submit {*/
-    /*background-color:transparent;*/
-    /*position:absolute;*/
-    /*border: none;*/
-/*}*/
 
 /* Menu */
 
@@ -421,4 +376,9 @@ color: #000000;
 }
 
 #footer-menu .current_page_item a {
+}
+
+
+#welcome h4 b {
+    color: #000000;
 }

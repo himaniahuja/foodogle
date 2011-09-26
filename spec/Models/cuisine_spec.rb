@@ -34,10 +34,6 @@ describe Cuisine do
       cuisine_with_duplicate_title = Cuisine.new(@attr)
       cuisine_with_duplicate_title.should_not be_valid
    end
-
-
-
-
 end
 # == Schema Information
 #

@@ -1,15 +1,21 @@
 <head>
+
 <%= javascript_include_tag :defaults%>
+<!--  The following code is commented out. This was written t create a slide show on home page.
+But, Due to an issue with JQuery the slide show had to be excluded. Will work on it.
 <%= javascript_include_tag "jquery.min.js" %>
 <%= javascript_include_tag "diapo.js" %>
 <%= javascript_include_tag "diapo.min.js" %>
 <%= javascript_include_tag "jquery.easing.1.3.js" %>
 <%= javascript_include_tag "jquery.hoverIntent.minified.js" %>
 <%= javascript_include_tag "jquery.mobile-1.0b2.min.js" %>
-<%= stylesheet_link_tag "diapo.css" %>
-
+<%#= stylesheet_link_tag "diapo.css" %>
+-->
 <script>
-$(document).ready(function(){ $('.pix_diapo').diapo();
+$(document).ready(function(){
+ //   if( $('#pix_pag_ul').length == 0 ){
+ //       $('.pix_diapo').diapo();
+ //   }
 });
 </script>
 <style>
@@ -27,6 +33,12 @@ section {
 </head>
 
 <body>
+<div id="welcome">
+<h1> Welcome to foodogle </h1>
+<br/>
+<h4> Add <b>recipes</b>. Look for recipes by <b>name</b>. by <b>cuisine</b>. by <b>ingredients!!</b> </h4>
+
+</div>
 <section>
 <div style="overflow:hidden; width:510px; margin: 40px auto; padding:0 15px;">
   <div class='pix_diapo'>

@@ -4,7 +4,6 @@ class IngredientsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      #format.xml  { render :xml => @recipes }
     end
   end
 
@@ -41,13 +40,7 @@ class IngredientsController < ApplicationController
     end
 
     respond_to do |format|
-
-      #if @recipes != []
         format.html # create.html.erb
-       #else
-         #format.html {render action (@recipe, :notice => 'Cuisine was successfully created.')  }
-         #format.html {redirect_to "/ingredients/index", :notice => 'No Recipes available' }
-       #end
     end
   end
 

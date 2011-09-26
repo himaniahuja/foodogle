@@ -35,3 +35,18 @@ class Recipe < ActiveRecord::Base
 
 end
 
+
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)
+#  description :text
+#  image_url   :string(255)
+#  cuisine_id  :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  content     :text
+#
+

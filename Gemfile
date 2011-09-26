@@ -11,13 +11,16 @@ gem 'sqlite3'
 gem 'will_paginate', '3.0.pre2'
 
 
+gem "rspec-rails", "~> 2.4", :group => [:test, :development]
 
 group :development do
 gem 'annotate'
-gem "rspec-rails", "~> 2.4"
-
 end
 
+group :test do
+
+  gem "capybara"
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'

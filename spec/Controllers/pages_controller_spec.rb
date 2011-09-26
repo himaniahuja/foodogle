@@ -1,7 +1,6 @@
 require 'spec_helper'
 
-describe PagesController do
-  render_views
+describe PagesController, :type => :controller do
 
   describe "GET 'home'" do
     it "should be successful" do
