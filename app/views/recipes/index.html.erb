@@ -1,26 +1,23 @@
 <h2> Click on the Recipe to view details </h2>
 <br/>
 
- <%= will_paginate %>
+<%= will_paginate %>
 
 <% @recipes.each do |recipe| %>
 
   <table>
-  <tr>
-    <td><h3><%= link_to recipe.name, recipe %></h3></td>
-
-    <td><%= image_tag("food.jpg", :weight => "100", :height => "100") %></td>
-  <tr/>
+      <tr>
+        <td class="recipeUrl" width = "1%"><%= image_tag(recipe.image_url, :weight => "100", :height => "100") %></td>
+        <td class="recipeName" width = "15%"><h3><%= link_to recipe.name, recipe %></h3></td>
+      <tr/>
   </table>
 
 <% end %>
 <br />
- <%= will_paginate %><br/>
+<%= will_paginate %><br/>
 
 <h3>
   <%= link_to 'Add Recipe', new_recipe_path %>
-
-
 </h3>
 
 

@@ -1,6 +1,50 @@
-<p>Recipe of the Day</p>
+<head>
+<%= javascript_include_tag :defaults%>
+<%= javascript_include_tag "jquery.min.js" %>
+<%= javascript_include_tag "diapo.js" %>
+<%= javascript_include_tag "diapo.min.js" %>
+<%= javascript_include_tag "jquery.easing.1.3.js" %>
+<%= javascript_include_tag "jquery.hoverIntent.minified.js" %>
+<%= javascript_include_tag "jquery.mobile-1.0b2.min.js" %>
+<%= stylesheet_link_tag "diapo.css" %>
 
-<%= image_tag("brg.jpeg") %>
+<script>
+$(document).ready(function(){ $('.pix_diapo').diapo();
+});
+</script>
+<style>
+body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 12px;
+        line-height: 10px;
+}
+section {
+        display: block;
+        overflow: hidden;
+        position: relative;
+}
+</style>
+</head>
+
+<body>
+<section>
+<div style="overflow:hidden; width:510px; margin: 40px auto; padding:0 15px;">
+  <div class='pix_diapo'>
+
+    <% @images.each do |img|  %>
+      <div data-thumb="/images/<%=img%>">
+        <img src="/images/<%=img%>" width="638" height="479">
+      </div>
+
+    <% end %>
+  </div>
+</div>
+
+<br/>
+</section>
+</body>
+
+
 
 
 

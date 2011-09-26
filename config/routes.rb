@@ -1,4 +1,5 @@
 Foodogle::Application.routes.draw do
+
   resources :recipes
 
   resources :cuisines
@@ -7,10 +8,6 @@ Foodogle::Application.routes.draw do
   get "pages/home"
   get "pages/contact"
   get "pages/about"
-
-
-  match '/ingredients/new', :controller => 'ingredients', :action => "new"
-
 
   root :to => "pages#home"
 

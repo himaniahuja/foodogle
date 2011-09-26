@@ -41,7 +41,7 @@ describe Recipe do
    end
 
    it "should reject names that are too long" do
-    long_name = "a" * 21
+    long_name = "a" * 51
     long_name_recipe = Recipe.new(@attr.merge(:name => long_name))
     long_name_recipe.should_not be_valid
    end
@@ -61,4 +61,19 @@ describe Recipe do
 
 end
 
+
+
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id          :integer         not null, primary key
+#  name        :string(255)
+#  description :text
+#  image_url   :string(255)
+#  cuisine_id  :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#  content     :text
+#
 

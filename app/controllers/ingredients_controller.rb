@@ -30,9 +30,6 @@ class IngredientsController < ApplicationController
       @search_strings << params[:search_4]
      end
 
-
-
-
     @ingredients = Ingredient.my_search(@search_strings, @search_type)
     @ingredients.each do |ingredient|
         @recipe = Recipe.find(ingredient.recipe_id)
@@ -42,8 +39,6 @@ class IngredientsController < ApplicationController
         end
 
     end
-
-
 
     respond_to do |format|
 

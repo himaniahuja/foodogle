@@ -3,7 +3,9 @@ class RecipesController < ApplicationController
   # GET /recipes.xml
   def index
 
-   @recipes = Recipe.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
+   @recipes = Recipe.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+   @recipes.sort! {|a, b| a.name <=> b.name}
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +19,11 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @cuisine = Cuisine.find(@recipe.cuisine_id)
 
-    @ingredients = Ingredient.find(:all, :conditions => { :recipe_id => @recipe.id})
+    @ingredients = Ingredient.find(:all, :order => "ing_name", :conditions => { :recipe_id => @recipe.id})
+
+    @ingredients.each do |i|
+      puts i.ing_name.class
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -31,7 +37,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.new
     @cuisines = Cuisine.find(:all, :order => 'title')
 
-    ingredient = @recipe.ingredients.build
+    #@ingredient = @recipe.ingredients.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,23 +45,12 @@ class RecipesController < ApplicationController
     end
   end
 
-  # GET /recipes/1/edit
-  #def edit
-  #  @recipe = Recipe.find(params[:id])
-  #  @cuisines = Cuisine.find(:all, :order => 'title')
-  #  @ingredients = Ingredient.all
-  #end
-
-  # POST /recipes
-  # POST /recipes.xml
-
-
   def create
   @recipe = Recipe.new(params[:recipe])
   @cuisines = Cuisine.find(:all, :order => 'title')
+  @recipe.ingredients.build
 
-   @recipe.ingredients.build
-     respond_to do |format|
+    respond_to do |format|
        if @recipe.save
             format.html { redirect_to(@recipe, :notice => 'Recipe was successfully created.') }
             format.xml  { render :xml => @recipe, :status => :created, :location => @recipe }
@@ -68,49 +63,6 @@ class RecipesController < ApplicationController
   end
 
 
- # def get_ingredients(recipe)
-  #  @ingredients = Ingredient.find(:all, :conditions => { :recipe_id => recipe})
-
-  #  @ingredients.each do |ing|
-  #    ing.ing_name
-  #  end
-
- # end
-
-  # PUT /recipes/1
-  # PUT /recipes/1.xml
- # def update
- #   @recipe = Recipe.find(params[:id])
-
- #   respond_to do |format|
- #     if @recipe.update_attributes(params[:recipe])
- #       format.html { redirect_to(@recipe, :notice => 'Recipe was successfully updated.') }
- #       format.xml  { head :ok }
- #     else
- #     format.html { render :action => "edit" }
- #       format.xml  { render :xml => @recipe.errors, :status => :unprocessable_entity }
- #     end
- #   end
- #   @ingredient = Ingredient.create(:ing_name => params[:ing_name])
- #   respond_to do |format|
- #     if @ingredient.save
- #       format.html { redirect_to ingredients_path }
- #     else
- #       flash[:notice] = "Ingredient failed to save."
-  #      format.html { redirect_to ingredients_path  }
- #     end
- #   end
- # end
-
-  # DELETE /recipes/1
-  # DELETE /recipes/1.xml
- # def destroy
- #   @recipe = Recipe.find(params[:id])
- #   @recipe.destroy
- #
- #   respond_to do |format|
- #     format.html { redirect_to(recipes_url) }
- #     format.xml  { head :ok }
- #   end
- # end
 end
+
+

@@ -20,6 +20,7 @@
             </div>
         </div>
             <!-- end #header -->
+
         <div id="wrapper">
            	<div id="menu">
            		<ul>
@@ -30,14 +31,14 @@
            		</ul>
            	</div>
         <!-- end #menu -->
+
+
            	<div id="search-wrapper" >
-                <%= form_tag recipes_path, :method => 'get' do %>
-                    <%= text_field_tag :search, params[:search] || " Search recipe"%>
-                    <%#= image_submit_tag ("img02.jpg")%>
-                    <% submit_tag "  ", :name => nil %>
-                <%end%>
+                <%= render :partial => 'layouts/search' %>
             </div>
+
         </div>
+        <!-- end #wrapper -->
         <div id="page">
             <div id="content">
                 <div class="post">
@@ -54,7 +55,7 @@
                             <li><%= link_to "Search by ingredients", '/ingredients' %></li>
                             <br/>
                             <h4>Cuisines</h4>
-                            <% $cuisines = Cuisine.find(:all, :limit => 10)  %>
+                            <% $cuisines = Cuisine.find(:all, :limit => 10, :order => 'title')  %>
                             <% $cuisines.each do |cuisine| %>
                                 <li><%= link_to cuisine.title, cuisine %></li>
                             <% end %><br/>
@@ -81,12 +82,12 @@
         <div id="footer-menu">
             <ul>
                 <li class="current_page_item"><a href="/pages/home">Homepage</a></li>
-                <li><a href="/pages/about">About</a></li>
-                <li><a href="/pages/contact">Contact</a></li>
+                <li><a href="/pages/about">About us</a></li>
+                <li><a href="/pages/contact">Contact us</a></li>
             </ul>
         </div>
         <div id="footer">
-            <p>Designed by Himani Ahuja</p>
+            <p>Copyright (C) 2011 foodogle.Com. All Rights Reserved. Design By Himani Ahuja.</p>
         </div>
         <!-- end #footer -->
     </body>

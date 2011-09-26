@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110915062256) do
+ActiveRecord::Schema.define(:version => 20110924225136) do
 
   create_table "cuisines", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110915062256) do
     t.integer  "recipe_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "quantiy"
   end
 
   add_index "ingredients", ["recipe_id"], :name => "index_ingredients_on_recipe_id"

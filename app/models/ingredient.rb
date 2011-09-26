@@ -14,17 +14,11 @@ class Ingredient < ActiveRecord::Base
     search_condition = " "
 
     search_items.each do |si|
-
-      puts "aAAAAA"
-      puts si
       if si
-
-        search_condition = search_condition + "ing_name = '#{si}'"
+        search_condition = search_condition + "ing_name LIKE '%#{si}%'"
         if si != last_element
           search_condition = search_condition + " " + search_type + " "
-
         end
-
       end
     end
 
@@ -32,6 +26,7 @@ class Ingredient < ActiveRecord::Base
 
   end
 end
+
 
 # == Schema Information
 #
@@ -42,5 +37,6 @@ end
 #  recipe_id  :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  quantiy    :string(255)
 #
 

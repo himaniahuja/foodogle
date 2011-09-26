@@ -1,9 +1,6 @@
-<%= image_tag("ing.jpg") %>
-
+<h2>Enter the ingredients </h2>
 <br/>
-<br/>
-<h3>Enter the ingredients you have</h3>
-<div id="search" >
+<div id="searchIng" >
      <%= form_for ingredients_path, :method => 'get', :action => 'create' do %>
      <p>
         <%= text_field_tag :search_1, params[:search_1]%>   <br/>
@@ -14,6 +11,8 @@
      </p>
      <% end %>
 </div>
+<br/>
+<%= image_tag("pic1.jpg", :width => "500", :height => "300") %>
 
 
 

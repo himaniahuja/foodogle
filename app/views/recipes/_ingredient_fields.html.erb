@@ -1,6 +1,8 @@
 <p class="fields">
         <%= f.label :ing_name, "Name" %>
-        <%= f.text_field :ing_name, :size => 40 %>
+        <%= f.text_field :ing_name, :size => 20 %>
+        <%= f.label :quantiy, " Quantity" %>
+        <%= f.text_field :quantiy, :size => 10 %>
         <%= f.hidden_field :_destroy %>
         <%= link_to_function "remove", "remove_fields(this)"%> <br/>
 </p>

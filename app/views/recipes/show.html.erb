@@ -1,38 +1,35 @@
 <p id="notice"><%= notice %></p>
-<h2>
-<p>
-  <%= @recipe.name %>
-</p>
-</h2>
 
 <p>
-  <%= image_tag(@recipe.image_url, :weight => "200", :height => "200") %>
+   <h2>
+      <%= @recipe.name %>
+   </h2>
+   <%= @recipe.description %>
 </p>
-
 
 <p>
-  <b>Short description:</b>
-  <%= @recipe.description %>
+  <%= image_tag(@recipe.image_url, :width => "200", :height => "200") %>
 </p>
-
-
 <p>
   <b>Cuisine:</b>
   <%= @cuisine.title %>
 </p>
 
 <p>
-<b> Ingredients: </b>
+  <b> Ingredients: </b>
     <% @ingredients.each do |f| %>
-    <%= f.ing_name %>
+    <table>
+        <tr>
+            <td class="ingName" width= "15%"><%= f.ing_name%> </td>
+            <td class="quantity" width= "30%"><%= f.quantiy %> </td>
+        </tr>
+    </table>
     <% end %>
-</p>
 
 <p>
   <b>Content:</b>
   <%= @recipe.content %>
 </p>
-
 
 <br/>
 <g:plusone annotation="inline"></g:plusone>

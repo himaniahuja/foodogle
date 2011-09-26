@@ -108,9 +108,14 @@ a:hover {
 }
 /* Search */
 
+#search {
+    width: 220px;
+    height: 20px
+}
+
 #search-wrapper {
 	float: right;
-	width: 180px;
+	width: 240px;
     padding-right: 50px;
     padding-top: 10px;
     height: 30px;
@@ -131,7 +136,8 @@ a:hover {
 }
 
 #search-text {
-	width: 120px;
+
+	width: 220px;
     padding: 0px;
 
 	/*padding: 8px 5px 6px 5px;*/
@@ -146,6 +152,7 @@ a:hover {
 #search-submit {
 	width: 62px;
 	height: 22px;
+    padding-left: 2px;
 	border: none;
 	background: none;
 	color: #000000;
@@ -262,89 +269,24 @@ a:hover {
 
 }
 
+#content td{
+text-align:left;
+color: #000000;
+}
+
 #content a {
     color: #282;
 }
 
+#content b {
+    color: #8B0000;
 
-.post {
-	margin-bottom: 40px;
 }
 
-.post-bgtop {
-}
+#content .desc{
+    max-width: 500px;
+    max-height: 15px;
 
-.post-bgbtm {
-}
-
-.post .title {
-	height: 38px;
-	margin-bottom: 10px;
-	padding: 12px 0 0 0px;
-	letter-spacing: -.5px;
-	color: #000000;
-}
-
-.post .title a {
-	color: #000000;
-	border: none;
-}
-
-.post .meta {
-	margin-bottom: 30px;
-	padding: 5px 0px 15px 0px;
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-}
-
-.post .meta .date {
-	float: left;
-}
-
-.post .meta .posted {
-	float: right;
-}
-
-.post .meta a {
-}
-
-.post .entry {
-	padding: 0px 0px 20px 0px;
-	padding-bottom: 20px;
-	text-align: justify;
-}
-
-.more {
-	float: left;
-	display: block;
-	width: 120px;
-	height: 23px;
-	margin-right: 10px;
-	padding: 2px 0px 0px 0px;
-	background: url(img04.jpg) no-repeat left top;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 10px;
-	color: #333333;
-	
-}
-
-
-
-.comments {
-	float: left;
-	display: block;
-	width: 120px;
-	height: 23px;
-	padding: 2px 0px 0px 0px;
-	background: url(img04.jpg) no-repeat left top;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 10px;
-	color: #333333;
-	
 }
 
 /* Sidebar */
@@ -413,27 +355,6 @@ a:hover {
 #sidebar a:hover {
 	text-decoration: underline;
 	color: #FFFFFF;
-}
-
-/* Calendar */
-
-#calendar {
-}
-
-#calendar_wrap {
-	padding: 20px;
-}
-
-#calendar table {
-	width: 100%;
-}
-
-#calendar tbody td {
-	text-align: center;
-}
-
-#calendar #next {
-	text-align: right;
 }
 
 /* Footer */

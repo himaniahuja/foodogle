@@ -39,3 +39,14 @@ describe Cuisine do
 
 
 end
+# == Schema Information
+#
+# Table name: cuisines
+#
+#  id          :integer         not null, primary key
+#  title       :string(255)
+#  description :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
