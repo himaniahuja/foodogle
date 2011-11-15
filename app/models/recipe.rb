@@ -27,9 +27,7 @@ class Recipe < ActiveRecord::Base
 
   def self.cuisineSearch(search)
     if search
-      find(:all, :conditions => ['cuisine_id LIKE ?', "#{search}"], :order => "name")
-    else
-      scoped
+      find(:all, :conditions => {:cuisine_id => "#{search}"}, :order => "name")
     end
   end
 
