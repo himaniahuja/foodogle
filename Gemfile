@@ -6,12 +6,13 @@ gem 'bundler'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem "thin"
 gem 'pg'
 gem 'will_paginate', '3.0.pre2'
 
 
 gem "rspec-rails", "~> 2.4", :group => [:test, :development]
+gem 'therubyracer-heroku'
 
 group :development do
 gem 'annotate'
