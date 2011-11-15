@@ -7,7 +7,7 @@ gem 'bundler'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'will_paginate', '3.0.pre2'
 
 
