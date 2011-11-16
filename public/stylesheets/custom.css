@@ -101,7 +101,12 @@ a:hover {
 	font-style: italic;
 	color: #FFFFFF;
 } 
+.table {
 
+  margin-bottom: 0em;
+  height: 10px;
+
+}
 #logo a {
 	border: none;
 	background: none;
@@ -227,6 +232,7 @@ a:hover {
 #content td{
 text-align:left;
 color: #000000;
+padding: 0px 0px 0px 0px;
 }
 
 #content a {
