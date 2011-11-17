@@ -5,18 +5,12 @@
 <p>
   <b>Name:</b>
   <%= @recipe.name %>
-  <!-- Place this tag where you want the +1 button to render -->
-    <g:plusone annotation="inline"></g:plusone>
-</p>
-
-<p>
-  <b>Short description:</b>
+  <br/>
   <%= @recipe.description %>
 </p>
-
 <p>
   <b>Image url:</b>
-  <%= @recipe.image_url %>
+  <%= image_tag(@recipe.image_url, :weight => "200", :height => "200") %>
 </p>
 
 <p>
@@ -35,4 +29,7 @@
   <b>Content:</b>
   <%= @recipe.content %>
 </p>
+
+<br/>
+  <g:plusone annotation="inline"></g:plusone>
 
