@@ -78,7 +78,7 @@ a:hover {
 
 #logo {
 	margin: 0;
-	padding: 0px 0px 0px 60px;
+	padding: 0px 0px 0px 20px;
 	color: #000000;
 }
 
@@ -99,7 +99,7 @@ a:hover {
 	padding: 0px 0 0 10px;
 	font: normal 14px Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
-	color: #FFFFFF;
+	color: #282;
 } 
 .table {
 
