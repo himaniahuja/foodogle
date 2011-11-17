@@ -19,7 +19,7 @@ class Recipe < ActiveRecord::Base
   def self.search(search)
     if search
       search_condition = "%" + search + "%"
-      find(:all, :conditions => ['name LIKE ? OR description LIKE ? OR content LIKE ?', search_condition, search_condition, search_condition], :order => "name")
+      find(:all, :conditions => ['name ILIKE ? OR description ILIKE ? OR content ILIKE ?', search_condition, search_condition, search_condition], :order => "name")
     else
       scoped
     end

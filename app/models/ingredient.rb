@@ -7,7 +7,7 @@ class Ingredient < ActiveRecord::Base
 
     search_items.each do |si|
       if si
-        search_condition = search_condition + "ing_name LIKE '%#{si}%'"
+        search_condition = search_condition + "ing_name ILIKE '%#{si}%'"
         if si != last_element
           search_condition = search_condition + " " + search_type + " "
         end
