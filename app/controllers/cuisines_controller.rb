@@ -1,4 +1,6 @@
 class CuisinesController < ApplicationController
+
+  before_filter :authenticate_user!
   # GET /cuisines
   # GET /cuisines.xml
   def index
