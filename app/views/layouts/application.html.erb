@@ -18,6 +18,17 @@
                  <%= image_tag("foodogle.png", :width => "200", :height => "80") %>
                  <p> belly rules the mind....</p>
             </div>
+
+            <div id="user_nav">
+  				<% if user_signed_in? %>
+    				Signed in as <%= current_user.email %>.
+    				<br/>
+    				<br/>
+    				Not you? - <tb/> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  				<% else %>
+    				<%= link_to "Become a member", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+  				<% end %>
+	</div>
         </div>
             <!-- end #header -->
 

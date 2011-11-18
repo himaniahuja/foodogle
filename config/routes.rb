@@ -1,5 +1,7 @@
 Foodogle::Application.routes.draw do
 
+  devise_for :users
+
   resources :recipes
 
   resources :cuisines

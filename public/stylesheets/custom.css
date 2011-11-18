@@ -388,3 +388,18 @@ padding: 0px 0px 0px 0px;
 #welcome h4 b {
     color: #000000;
 }
+
+#user_nav {
+  color: #FFFFff;
+  font: normal 14px Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  position:fixed;
+  top:10px;
+  right:60px;
+}
+
+#user_nav a{
+  color: #FFFF00;
+ font-weight:bold;
+  font-style: normal;
+}
