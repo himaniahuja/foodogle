@@ -26,7 +26,9 @@
     				<br/>
     				Not you? - <tb/> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   				<% else %>
-    				<%= link_to "Become a member", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+    				<%= link_to " * Become a member", new_user_registration_path %>
+    				</br>
+    				<%= link_to " * Sign in", new_user_session_path %>
   				<% end %>
 			</div>
         </div>
