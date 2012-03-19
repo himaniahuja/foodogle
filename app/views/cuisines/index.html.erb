@@ -1,32 +1,23 @@
 <h2>Cuisines</h2>
 <br/>
-<table>
-<tr>
+
 <td>
     <%= will_paginate %>
 
     <div id="cuisines">
-    <% @cuisines.each do |cuisine| %>
-        <ul>
-            <td><h3><%= link_to cuisine.title, cuisine %></h3></td>
 
-        </ul>
+    <% @cuisines.each do |cuisine| %>
+           <ul>
+            <td><h3><%= link_to cuisine.title, cuisine %></h3></td>
+           </ul>
+
     <% end %>
+
 
  </div>
 
 
 <%= will_paginate %>
-
-</td>
-<td>
-
-
-<%= image_tag("cuisine.jpg", :width => "400", :height => "450") %>
-
-</td>
-
-</tr>
 </table>
 
 <br />
