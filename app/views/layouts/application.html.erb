@@ -21,7 +21,9 @@
 
             <div id="user_nav">
   				<% if user_signed_in? %>
-    				Signed in as <%= current_user.email %>.
+    				Signed in as
+    				<br/>
+    				<%= current_user.email %>.
     				<br/>
     				<br/>
     				Not you? - <tb/> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
